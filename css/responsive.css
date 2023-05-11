@@ -1,0 +1,217 @@
+/*Declaramos a nossas cores aqui*/
+:root{
+  --background-branco:#fff;
+  --color-branco:#fff;
+  --color-preto:#0c0c0c;
+  --background-preto:#0c0c0c;
+  --color-azul-escuro:#124085;
+  --background-azul-escuro:#124085;
+}
+@media (max-width:1084px) {
+  main section.Pagina_Inicial .conteudo{
+    margin: 0 2rem;
+}
+}
+@media (max-width:1271px) {
+  main section.form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+   } 
+}
+@media (max-width:1024px) {
+  main section.Pagina_Inicial .conteudo{
+  padding-left: 4rem;
+  }
+  main section.Servicos .cards .card{
+   height: 40rem;
+  }
+  main section.Eventos .conteudo{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20rem;
+}
+main section.Eventos .conteudo img{
+ width: 100%;
+ max-width: 780px;
+}
+main section.Eventos .class-video-container{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+}
+@media (max-width:768px) {
+  header  nav {
+    display: none;
+  }
+  header nav  ul{
+    display: block;
+    margin: 15rem 0;
+  }
+  header nav  ul li{
+    margin:3rem 0;
+  }
+   /*-----------Style-menu-bar--------------------------*/
+header .menu-bar{
+   display:block;
+}
+header .menu-bar .bar{
+  display: block;
+  width: 28px;
+  height: 4px;
+  background: var(--background-preto);
+  margin: .9em auto;
+  transition: 0.3s ease-in-out;
+}
+header .menu-bar .bar:nth-child(2){
+ background: var(--background-azul-escuro);
+}
+.menu-bar-backgraund{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  margin-top: 40rem;
+  height: 50rem;
+  background: var(--background-branco);
+  transition: .3s ease-in-out;
+}
+.menu-bar-check .bar:nth-child(1){
+  transform:translateY(10px) rotate(-45deg);
+}
+.menu-bar-check .bar:nth-child(2){
+    opacity: 0;
+}
+.menu-bar-check .bar:nth-child(3){
+  transform: translateY(-8px) rotate(45deg);
+}
+/*-----------Style-main-section--------------------------*/
+main section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main section.Pagina_Inicial .conteudo{
+  margin-top:18rem;
+}
+  main section.Pagina_Inicial .bolinhas img ,.circulo img{
+    display:none;
+ }
+ main section.Servicos .conteudo{
+    margin-top: 5rem;
+}
+main section.Servicos .cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100rem;
+    margin-top: 4rem; 
+  }
+  main section.Servicos .cards .card{
+    margin:2rem;
+    width: 60%;
+    height: 80rem;
+  }
+  main section.Eventos .conteudo{
+    display: flex;
+    flex-direction: column;
+    margin-top: 6rem;
+}
+main section.Eventos .conteudo img{
+ width: 100%;
+ max-width: 780px;
+}
+main section.Eventos .class-video-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  height: 80rem;
+}
+main section.Sobre img{
+  width: 100%;
+  max-width: 700px;
+}
+/*---------footer----------*/
+footer{
+  position: relative;
+  display: block;
+  height: 45rem;
+ }
+   footer .sobre .conteudo .title strong{
+    font-size: 1.8rem;
+  }
+ /*----------Footer-rede-social-------------*/
+ footer .rede-social{
+  margin-top: 3rem;
+ }
+  footer .rede-social .conteudo{
+    display: inline-flex;
+   }
+ footer .rede-social h1{
+    font-size: 1.8rem;
+ }
+ footer .rede-social .conteudo ul{
+  font-size: 1.2rem;
+ }
+ footer .rede-social .conteudo .icons img{
+  width: 1.5rem;
+ }
+  /*----------Footer-empresa-----------------*/
+  footer .class-empresa{
+  float: left;
+    }
+   footer .class-empresa h1{
+    font-size: 1.8rem;
+   }
+   footer .class-empresa .conteudo ul{
+    font-size: 1.2rem;
+   }
+}
+
+@media (max-width: 425px) {
+  /*-----------Style-main-section--------------------------*/
+  main section.Pagina_Inicial .conteudo{
+      margin-top:12rem;
+  }
+  main section.Pagina_Inicial .conteudo h1{
+      font-size: 3rem;
+      margin-top:-1.5em;
+  }
+  main section.Pagina_Inicial .conteudo p{
+      font-size: 1.6rem;
+  }
+  main section.Servicos .cards{
+    margin-top: -6rem; 
+  }
+  main section.Servicos .cards .card{
+    width: 105%;
+  }
+  main section.Eventos .conteudo{
+    margin-top: -2rem;
+  }
+  main section.Eventos .class-video-container{
+  height: 40rem;
+  }
+  main section.Eventos .class-video-container .playlist{
+  height: 20rem;
+  margin-top: 2rem;
+  }
+  main section.Eventos .class-video-container .playlist .itens-list p{
+    font-size: 1rem;
+    }
+  main section.Eventos .class-video-container video{
+  width: 100%;
+  height: auto;
+  }
+  main section.Eventos .class-video-container .playlist .itens-list img{
+    width: 80%;
+    max-width: 780px;
+  }
+  }
+  

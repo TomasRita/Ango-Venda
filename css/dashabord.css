@@ -1,0 +1,319 @@
+/*Autor:Tomás Rita*/
+/*Declaramos a nossas cores aqui*/
+:root{
+    --background-branco:#fff;
+    --color-branco:#fff;
+    --color-preto:#0c0c0c;
+    --color-azul-escuro:#124085;
+    --background-azul-escuro:#124085;
+    --background-preta:#0c0c0c;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+html,body{
+    font-size: 62.5%;
+    font-family: 'poppins',serif;
+    scroll-behavior: smooth;
+}
+body{
+    overflow:auto;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 6em;
+    box-shadow: 3px 0px 12px #0c0c0c41;
+    position: fixed;
+    height: 100vh;
+    background: var(--background-branco);
+    z-index: 100;
+}
+header .logo{
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-preto);
+    pointer-events: none;
+    margin-top: -8rem;
+   }
+   header .logo span{
+       color: var(--color-azul-escuro);
+   }
+   header nav ul{
+       display: flex;
+       flex-direction: column;
+       font-size: 1.6rem;
+       gap:2em;
+       margin-top: -22rem;
+   }
+   header nav ul li a{
+       color: var(--color-preto);
+   }
+   header nav ul li a:hover ,header nav ul li a.active{
+       color: var(--color-azul-escuro);
+   }
+   header .icons{
+    position: absolute;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column; 
+    margin-top: 4rem;
+}
+header  .icons .list{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column; 
+  gap:6em;
+}
+header  .icons .list a{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: column; 
+  width: 0rem;
+  height: .3rem;
+  margin: 1.8em;
+  transition: .3s all;
+  }
+  
+header  .icons .list a img{
+width: 2.4rem;
+margin: 1.8em;
+}
+
+header  .icons .list a::after,header  .icons .list a:hover, header  .icons .list a.active{
+width: 2.8rem;
+contain: '';
+height: .3rem;
+border-radius: 4px;
+background: var(--background-preta);
+}
+      /*-----------Style-menu-bar--------------------------*/
+.menu-bar{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    top:4rem;
+    left:2rem;
+    z-index: 111;      
+ }
+.menu-bar .bar{
+   display: block;
+   width: 28px;
+   height: 4px;
+   background:var(--background-preta);
+   margin: .4em auto;
+   transition: 0.3s ease-in-out;
+ }
+.menu-bar .bar:nth-child(2){
+  background: var(--background-azul-escuro);
+ }
+ .menu-bar-check .bar:nth-child(1){
+    transform:translateY(5px) rotate(-45deg);
+  }
+  .menu-bar-check .bar:nth-child(2){
+      opacity: 0;
+  }
+  .menu-bar-check .bar:nth-child(3){
+    transform: translateY(-8px) rotate(45deg);
+  }
+  .menu-bar-active{
+   width: 5%;
+  }
+   /*-----------Style-main-section--------------------------*/
+main{
+    position: relative;
+  
+}
+/*espaço entre menu bar e section*/
+.es{
+    position: relative;
+    width: 20rem;
+   }
+ /*------------------------*/
+main section{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+}
+main section:nth-child(odd){
+    background: #f1eded;
+}
+main section.Dashboard{
+  position: relative;
+  display: flex;
+  }
+  main section.Dashboard .conteudo{
+    position: relative;
+    margin-top: 5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    }
+main section.Dashboard .conteudo input{
+    width: 40rem;
+    padding: 1em;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid var(--background-preta);
+}
+main section.Dashboard .conteudo .graficos{
+    display: flex;
+}
+main section.Dashboard .grafico{
+ box-shadow: 3px 3px 12px #0c0c0c28;
+ background: var(--background-branco);
+ width: 70rem;
+ height: 40rem;
+ border-radius: 8px;
+}
+main section.Dashboard .container-progress{
+    box-shadow: 3px 3px 12px #0c0c0c28;
+    background: var(--background-branco);
+    width: 30rem;
+    height: 50rem;
+    border-radius: 8px;
+    margin-left: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4em;
+    gap: 5rem;
+}
+
+/*--------------tabela------------------*/
+main section.Dashboard .conteudo .tab{
+  position: relative;
+  width: 100%;
+  max-width: 1050px;
+  overflow: hidden;
+  overflow-x: auto;
+  box-shadow: 3px 3px 12px #0c0c0c28;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    text-align:left;
+    padding: 1em;
+    font-size: 1.6rem;
+    height:5rem;
+    background-color: var(--background-azul-escuro);
+    color: #fff;
+}   
+td {
+    text-align:left;
+    padding: 1em;
+    font-size: 1.2rem;
+}
+/*-----------------------------------------------*/
+main section.Dashboard .container-progress h1{
+    font-size: 1.8rem;
+    color: var(--color-azul-escuro);
+    font-weight: 500;
+}
+main section.Dashboard .container-progress h2{
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 1rem;
+  font-weight: 500;
+  color: var(--color-azul-escuro);
+}
+main section.Dashboard .container-progress .adicionar{
+  width: 6.5rem;
+  height: 6.5rem;
+  background: var(--background-azul-escuro);
+  box-shadow: 9px 9px var(--background-preta);
+  border-radius: 100%;
+  font-size: 5rem;
+  color: var(--color-branco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: .3s all;
+}
+main section.Dashboard .container-progress .adicionar:hover{
+    background: var(--background-preta);
+    box-shadow: 9px 9px var(--background-azul-escuro);
+  }
+main section.Dashboard .container-progress .progress .circulo{
+    position: relative;
+    width: 16rem;
+    height: 16rem;
+    border-radius: 100%;
+    font-size: 3rem;
+    color: var(--color-azul-escuro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: conic-gradient(#124085 3.6deg, #ededed 0deg);
+    box-shadow:3px 3px 12px #0c0c0c3a;
+  }
+  main section.Dashboard .container-progress .progress .circulo span{
+    z-index: 111;
+    font-weight:600;
+  }
+  main section.Dashboard .container-progress .progress .circulo::before{
+  content:"";
+  position:absolute;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 100%;
+  background:#fff;
+  }
+  /*--------------section-mensagem----------*/
+  main section.Mensagens{
+    position: relative;
+    display: flex;
+  }
+  /*espaço entre menu bar e section*/
+  .es1{
+    width: 25rem;
+  }
+  /*---------------section-Mensagens----------------*/
+  main section.Mensagens  .container-chat{
+    position: relative;
+    display: flex;
+    padding: 4em;
+  }
+  main section.Mensagens .container-chat img{
+    width: 90%;
+    max-width: 500px;
+  }
+  main section.Mensagens .container-chat .chat{
+    width: 100rem;
+    background: var(--background-branco);
+    box-shadow: 3px 3px 12px #0c0c0c33;
+    border-radius: 8px;
+  }
+  main section.Mensagens .container-chat .chat{
+    width: 100rem;
+    background: var(--background-branco);
+    box-shadow: 3px 3px 12px #0c0c0c33;
+    border-radius: 8px;
+    padding: 2em;
+  }
+  main section.Mensagens .container-chat .chat #chat-pesquisar{
+    width: 25rem;
+    padding: .9rem;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid var(--background-preta);
+ }

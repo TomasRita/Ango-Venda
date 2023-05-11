@@ -1,0 +1,36 @@
+
+:root{
+    --background-branco:#fff;
+    --color-branco:#fff;
+    --color-preto:#0c0c0c;
+    --color-azul-escuro:#124085;
+    --background-azul-escuro:#124085;
+}
+main section.Eventos .class-video-container{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background:var(--background-branco) ;
+ box-shadow: 3px 0px 12px #0c0c0c44;
+ margin-top: -10rem;
+ padding: 3rem;
+
+}
+main section.Eventos .class-video-container video{
+    max-width: 700px;
+    width: 90%;
+    height: auto;
+}
+main section.Eventos .class-video-container .playlist{
+  padding: 3rem;
+  height: 35rem;
+  overflow-y: scroll;
+}
+main section.Eventos .class-video-container .playlist .itens-list img{
+    max-width: 230px;
+    width: 90%;
+}
+main section.Eventos .class-video-container .playlist .itens-list p{
+    font-size: 1.2rem;
+    color: var(--color-preto);
+}

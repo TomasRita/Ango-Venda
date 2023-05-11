@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/dashabord.css">
+    <title>Dashboard</title>
+</head>
+<body>
+<!--Menu-->
+<div class="menu-bar">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+ </div>
+  <header>
+    <a class="logo" href="#"><span>An</span>go<span>Ven</span>da</a>
+    <nav>
+      <ul>
+        <li><a href="#Dashboard" class="active">Dashboard</a></li>
+        <li><a href="#Mensagens">Mensagens</a></li>
+        <li><a href="#Produtos">Produtos</a></li>
+        <li><a href="#Definicao">Definições</a></li>
+      </ul>
+    </nav>
+    <div class="icons">
+      <div class="list">
+      <a href="#Dashboard" class="active"><img  src="../icons/Dash.png" alt=""></a>
+      <a href="#Mensagens"><img src="../icons/sms.png" alt=""></a>
+      <a href="#Produtos"><img src="../icons/prot.png" alt=""></a>
+      <a href="#Definicao"><img src="../icons/definir.png" alt=""></a>
+      </div>
+    </div>
+  </header>
+<!--main-->
+<main>
+
+  <section class="Dashboard"  id="Dashboard">
+    <div class="es"></div>
+    <div class="conteudo">
+      <input id="pesquisar" type="search" placeholder="Pesquisar">
+      <div class="tab">
+      <table>
+        <thead>
+          <tr>
+            <th>Proprietário</th>
+            <th>Produto</th>
+            <th>Data</th>
+            <th>Quantidade</th>
+            <th>Foto</th>
+            <th>Acção</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+        </tbody>
+      </table>
+    </div>
+      <div class="graficos">
+        <div class="grafico">
+          <div id="mygrafico" style="width:100%;max-width:700px;"></div>
+        </div>
+        <div class="container-progress">
+          <h1>Adicionar produtos</h1>
+          <div class="adicionar">
+            <span>+</span>
+          </div>
+          <div class="progress">
+            <div class="circulo"><span class="progressvalue">85%</span></div>
+          </div>
+          <h2>Quantidade de produtos adicionados</h2>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="Mensagens" id="Mensagens">
+    <div class="es1"></div>
+    <div class="container-chat">
+      <img src="../ilustrações/In no time-cuate.png" alt="">
+      <div class="chat">
+        <input id="chat-pesquisar" type="search" placeholder="Pesquisar">
+
+      </div>
+    </div>
+  </section>
+  <section class="Produtos"  id="Produtos">
+    <div class="es"></div>
+  </section>
+  <section class="Definicao" id="Definicao">
+    <div class="es"></div>
+  </section>
+</main>
+<script src="../js/plotly-latest.min.js"></script>
+<script src="../js/grafico.js"></script>
+</body>
+</html>
