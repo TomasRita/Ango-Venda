@@ -66,3 +66,96 @@ let progress=setInterval(()=>{
   }
 },speed )
 
+/* trocar e chamar tela*/
+let Dashboard=document.querySelector('#Dashboard');
+Mensagens=document.querySelector('#Mensagens'),
+Produtos=document.querySelector('#Produtos'),
+Definicao=document.querySelector('#Definicao');
+
+let bar_Dashboard=document.querySelector('.bar_Dashboard');
+bar_Mensagens=document.querySelector('.bar_Mensagens'),
+bar_Produtos=document.querySelector('.bar_Produtos'),
+bar_Definicao=document.querySelector('.bar_Definicao');
+
+
+let navlinks=document.querySelectorAll('header a')
+sections=document.querySelectorAll('section');
+let navlink=document.querySelector('ul')
+let navlink_bar=document.querySelector('.list')
+
+navlink.addEventListener('click', function(e) {
+ let normalized = e.target.firstChild.textContent.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+ let Dados=normalized
+   navlinks.forEach(links => {
+      links.classList.remove('active');
+      links.classList.remove('active_bar');
+      document.querySelector('header a[href*=' + normalized + ']').classList.add('active'); 
+      document.querySelector('header .list a[href*=' + normalized + ']').classList.add('active_bar'); 
+    if (normalized == "Mensagens") {
+        Mensagens.style.display='flex'
+        Dashboard.style.display='none'
+        Produtos.style.display='none'
+        Definicao.style.display='none'
+    }
+    if (normalized == "Dashboard") {
+        Dashboard.style.display='flex'
+        Mensagens.style.display='none'
+        Produtos.style.display='none'
+        Definicao.style.display='none'
+    }
+      if (normalized == "Produtos") {
+        Produtos.style.display='flex'
+        Dashboard.style.display='none'
+        Mensagens.style.display='none'
+        Definicao.style.display='none'
+    }
+    if (normalized == "Definicao") {
+        Definicao.style.display='flex'
+        Dashboard.style.display='none'
+        Mensagens.style.display='none'
+        Produtos.style.display='none'
+    }
+  })
+
+});
+var
+  srcs = [],
+  images = document.querySelectorAll('.list a img');
+  navlink_bar.addEventListener('click', function (e) {
+   let normalized = "Dashboard"
+   navlinks.forEach(links => {
+      links.classList.remove('active');
+      links.classList.remove('active_bar');
+      document.querySelector('header a[href*=' + normalized + ']').classList.add('active'); 
+      document.querySelector('header .list a[href*=' + normalized + ']').classList.add('active_bar'); 
+  if (e.target == images[1]) {
+      Mensagens.style.display='flex'
+      Dashboard.style.display='none'
+      Produtos.style.display='none'
+      Definicao.style.display='none'
+      normalized = "Mensagens"
+  }
+  if (e.target == images[0]) {
+    Dashboard.style.display='flex'
+    Mensagens.style.display='none'
+    Produtos.style.display='none'
+    Definicao.style.display='none'
+    normalized = "Dashboard"
+}
+  if (e.target == images[2]) {
+    Produtos.style.display='flex'
+    Dashboard.style.display='none'
+    Mensagens.style.display='none'
+    Definicao.style.display='none'
+    normalized = "Produtos"
+}
+if (e.target == images[3]) {
+    Definicao.style.display='flex'
+    Dashboard.style.display='none'
+    Mensagens.style.display='none'
+    Produtos.style.display='none'
+    normalized = "Definicao"
+}
+})
+});
+

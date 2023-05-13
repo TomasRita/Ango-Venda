@@ -89,7 +89,7 @@ width: 2.4rem;
 margin: 1.8em;
 }
 
-header  .icons .list a::after,header  .icons .list a:hover, header  .icons .list a.active{
+header  .icons .list a::after,header  .icons .list a:hover, header  .icons .list .active_bar{
 width: 2.8rem;
 contain: '';
 height: .3rem;
@@ -155,6 +155,7 @@ main section:nth-child(odd){
 main section.Dashboard{
   position: relative;
   display: flex;
+  padding: 2em;
   }
   main section.Dashboard .conteudo{
     position: relative;
@@ -281,7 +282,7 @@ main section.Dashboard .container-progress .progress .circulo{
   /*--------------section-mensagem----------*/
   main section.Mensagens{
     position: relative;
-    display: flex;
+    display: none;
   }
   /*espaço entre menu bar e section*/
   .es1{
@@ -317,3 +318,13 @@ main section.Dashboard .container-progress .progress .circulo{
     outline: none;
     border: 1px solid var(--background-preta);
  }
+ /*----------section-Produtos------------*/
+ main section.Produtos{
+  position: relative;
+  display: none;
+}
+ /*----------section-Definicao------------*/
+ main section.Definicao{
+  position: relative;
+  display: none;
+}
